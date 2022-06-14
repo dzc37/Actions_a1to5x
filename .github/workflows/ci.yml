@@ -55,9 +55,9 @@ jobs:
         
           sudo apt-get update -y
           
-          sudo apt updatesudo apt install software-properties-common
+          sudo apt-get updatesudo apt install software-properties-common
           sudo add-apt-repository ppa:deadsnakes/ppa
-          sudo apt install python3.7
+          sudo apt-get install python3.7
           
           echo alias python=python3.7 >> ~/.bashrc
           source ~/.bashrc
