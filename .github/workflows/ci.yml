@@ -52,7 +52,9 @@ jobs:
 
       - name: Initialization environment
         run: |
+        
           sudo apt-get update -y
+          sudo apt-get --purge remove python3
           sudo apt-get install -y git wget curl aria2 python python3 python3-setuptools unzip axel cpio file
           pip3 install protobuf
           pip3 install gdown
