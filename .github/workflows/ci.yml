@@ -54,7 +54,14 @@ jobs:
         run: |
         
           sudo apt-get update -y
-          sudo apt-get --purge remove python3
+          
+          sudo apt updatesudo apt install software-properties-common
+          sudo add-apt-repository ppa:deadsnakes/ppa
+          sudo apt install python3.7
+          
+          echo alias python=python3.7 >> ~/.bashrc
+          source ~/.bashrc
+          
           sudo apt-get install -y git wget curl aria2 python python3 python3-setuptools unzip axel cpio file
           pip3 install protobuf
           pip3 install gdown
